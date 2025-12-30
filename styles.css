@@ -1,0 +1,19 @@
+body {
+  background-color: green;
+}
+img {
+  width: 20px;
+}
+
+aside {
+  background-color: #1992d4;
+  color: white;
+}
+
+header {
+  background-color: rgb(201, 201, 201);
+}
+
+main {
+  background-color: #e2e8f0;
+}
