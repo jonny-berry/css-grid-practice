@@ -1,7 +1,4 @@
-body {
-  background-color: green;
-}
-img {
+/* img {
   width: 20px;
 }
 
@@ -16,4 +13,29 @@ header {
 
 main {
   background-color: #e2e8f0;
+} */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: green;
+  display: grid;
+  grid-template: 2fr 5fr / 1fr 4fr;
+}
+
+/* grid-area: row-start / column-start / row-end / column-end; */
+
+#sidebar {
+  background-color: #1992d4;
+  display: grid;
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+#header {
+  background-color: #e2e8f0;
+}
+
+#main {
+  background-color: rgb(201, 201, 201);
 }
