@@ -1,11 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  width: 100vw;
-  height: 100vh;
   margin: 0;
-  background-color: green;
+  background-color: white;
   font-family: 'Roboto';
   display: grid;
-  grid-template: 1fr 9fr / 1fr 4fr;
+  grid-template: 1fr 6fr / 1fr 5fr;
 }
 
 ul {
@@ -22,13 +24,13 @@ ul {
   display: grid;
   grid-area: 1 / 1 / 3 / 2;
   grid-template-rows: 1fr 3fr 3fr;
-  /* height: 100vh; */
-  /* position: sticky; */
+  height: 100vh;
+  position: sticky;
   top: 0;
 }
 
 #sidebar-header-container {
-  font-size: clamp(0.5rem, 1.3vw, 1.5rem);
+  font-size: clamp(0.5rem, 0.65rem, 1.5rem);
   display: grid;
   grid-template: 1fr / 1fr 2fr;
   align-items: center;
@@ -37,7 +39,7 @@ ul {
 }
 
 #sidebar-header-container > img {
-  width: clamp(20px, 60%, 90%);
+  width: clamp(20px, 57%, 90%);
 }
 
 #sidebar-header-container > h1 {
@@ -191,56 +193,116 @@ ul {
 
 #main {
   background-color: #e2e8f0;
-  padding : 0 2vw 0 2vw;
+  padding : 1vh 2vw 4.5vh 2vw;
   display: grid;
-  grid-template: 1fr 4fr 1fr 4fr / 2fr 1fr;
+  /* grid-template: 0.1fr 1fr 0.1fr 1fr / 4fr 1fr; */
+  grid-template: 5% 45% 5% 45% / 4fr 1fr;
+  column-gap: 2%;
 }
 
 #main > h2 {
   margin: 0;
   font-size: 0.95rem;
-  font-weight: 450;
+  font-weight: 500;
+  font-size: 1.2rem;
   align-self: center;
 }
 
 #your-projects-container {
   display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
   grid-area: 2 / 1 / 5 / 2;
+  gap: 2% 5%;
+  /* align-items: center;
+  justify-content: center; */
 }
 
 .project {
   background-color: white;
-  border-left: 20px solid #f0b429;
+  border-left: 1vw solid #f0b429;
+  border-radius: 7px;
+  padding: 6% 10% 0 4%;
 }
 
-.project > p {
+.project-description {
   color: #636363;
+  font-size: 1.25rem;
+  margin: 4% 0 0 0;
+}
+
+.project > h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.project-buttons {
+  margin: 20% 0 0 0;
+  display: grid;
+  grid-template-columns: 13% 13% 13%;
+  justify-content: end;
 }
 
 .project-buttons > button {
   background-color: rgba(255, 255, 255, 0);
   border: none;
   width: 3vw;
+  cursor: pointer;
 }
 
 #announcements {
   background-color: white;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
+  border-radius: 7px;
+}
+
+.announcement-container {
+  margin: 0 20px 0 20px;
 }
 
 .announcement-container > p {
   color: #636363;
 }
 
+#border-announcement-container {
+  border-top: 0.5px solid #636363;
+  border-bottom: 0.5px solid #636363;
+}
+
+#trending {
+  display: grid;
+}
+
 .trending-user-container {
   background-color: white;
   display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-template: 0.5fr 0.5fr / 1fr 1fr;
+  padding: 0 20px 0 20px;
+}
+
+.trending-user-container > h5 {
+  align-self: end;
+  margin: 0 0 7% 0;
+  font-size: 1.2rem;
+}
+
+.trending-user-container > p {
+  align-self: start;
+  margin: 7% 0 0 0;
+  font-size: 1rem;
 }
 
 .trending-avatar {
   grid-row-start: 1;
   grid-row-end: 3;
+  height: 40%;
+  align-self: center;
+}
+
+#top-border-radius-trending {
+  border-radius: 7px 7px 0 0;
+}
+
+#bottom-border-radius-trending {
+  border-radius: 0 0 7px 7px;
 }
