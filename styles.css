@@ -7,7 +7,25 @@ body {
   background-color: white;
   font-family: 'Roboto';
   display: grid;
-  grid-template: 1fr 6fr / 1fr 5fr;
+  grid-template: 1fr 9fr / 1fr 5fr;
+}
+
+@media (max-width: 1170px) {
+  body {
+    grid-template: 1fr 12fr / 1fr 5fr;
+  }
+}
+
+@media (max-width: 1070px) {
+  body {
+    grid-template: 1fr 13fr / 1fr 5fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    grid-template: 1fr 13fr / 1fr 5fr;
+  }
 }
 
 ul {
@@ -149,15 +167,24 @@ ul {
 
 #hello-header {
   font-size: 1rem;
-  margin: 0;
-  margin: 0 0 0 -2vw;
+  margin: 0 0 0 -6vw;
   align-self: end;
 }
 
 #bottom-header-username {
   font-size: 1.5rem;
-  margin: 0 0 0 -2vw;
+  margin: 0 0 0 -6vw;
   align-self: start;
+}
+
+@media (max-width: 1080px) {
+  #hello-header {
+    margin: 0 0 0 -3vw;
+  }
+
+  #bottom-header-username {
+    margin: 0 0 0 -3vw;
+  }
 }
 
 #bottom-right-header-container {
@@ -236,10 +263,22 @@ ul {
 }
 
 .project-buttons {
-  margin: 20% 0 0 0;
+  margin: 37% 0 0 5%;
   display: grid;
   grid-template-columns: 13% 13% 13%;
   justify-content: end;
+}
+
+@media (max-width: 1070px) {
+  .project-buttons {
+    margin: 60% 0 0 10%;
+  }
+}
+
+@media (min-width: 1560px) {
+  .project-buttons > button > img {
+    height: 70%;
+  }
 }
 
 .project-buttons > button {
@@ -283,7 +322,7 @@ ul {
 .trending-user-container > h5 {
   align-self: end;
   margin: 0 0 7% 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .trending-user-container > p {
@@ -295,8 +334,15 @@ ul {
 .trending-avatar {
   grid-row-start: 1;
   grid-row-end: 3;
-  height: 40%;
+  height: 30%;
   align-self: center;
+}
+
+@media (max-width: 1070px) {
+  .trending-avatar {
+    height: 20%;
+    margin-right: 1vw;
+  }
 }
 
 #top-border-radius-trending {
