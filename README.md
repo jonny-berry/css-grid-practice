@@ -1,7 +1,7 @@
 # CSS Grid Dashboard
 ### Built with 
   - HTML5
-  - CSS3 (Grid & Flexbox)
+  - CSS3
 
 This is a dashboard project I built while learning CSS grid through The Odin Project.
 
